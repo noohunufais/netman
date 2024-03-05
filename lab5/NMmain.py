@@ -2,13 +2,15 @@ from NMtcpdump import get_mac
 from NMdhcp import conf_dhcpv4
 from NMsnmp import snmp_get_interface_info, graph
 
-# # Getting the mac addresses(add_2_3[0]) and IPv6 addresses(add_2_3[1]) of R2 and R3 from the pcap file.
-# add_2_3 = get_mac("lab5.pcap","2001:4f10::cc69:72ff:fe36:f27e")  # VM IPv6 global
+# Getting the mac addresses(add_2_3[0]) and IPv6 addresses(add_2_3[1]) of R2 and R3 from the pcap file.
+add_2_3 = get_mac("lab5.pcap","2001:4f10::cc69:72ff:fe36:f27e")  # VM IPv6 global
 
-# ipv6_2_3 = add_2_3[1]
-# mac_2_3 = add_2_3[0]
+ipv6_2_3 = add_2_3[1]
+mac_2_3 = add_2_3[0]
 
-# # ping ipv6 2001:1234::C804:31FF:FECF:0
+print(add_2_3)
+
+# ping ipv6 2001:1234::C804:31FF:FECF:0
 # dhcp_clients = conf_dhcpv4(ipv6_2_3, mac_2_3)
 # print(dhcp_clients)
 
